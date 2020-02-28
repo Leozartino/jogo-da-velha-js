@@ -3,7 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
     <title>Jogo da Velha</title>
   </head>
-  <body></body>
+  <body>
+    <div class="board" id="board">
+      <div class="quadrado" data-quadrado></div>
+      <div class="quadrado" data-quadrado></div>
+      <div class="quadrado" data-quadrado></div>
+      <div class="quadrado" data-quadrado></div>
+      <div class="quadrado" data-quadrado></div>
+      <div class="quadrado" data-quadrado></div>
+      <div class="quadrado" data-quadrado></div>
+      <div class="quadrado" data-quadrado></div>
+      <div class="quadrado" data-quadrado></div>
+    </div>
+    <div class="msg-vencedor">
+      <div data-texto-vencedor></div>
+      <button id="jogarNovamente">Jogar novamente</button>
+    </div>
+  </body>
 </html>

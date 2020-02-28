@@ -1,0 +1,38 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --quadrado-size: 100px;
+  --mark-size: cal(var(--quadrado-size) * 0.9);
+}
+
+body {
+  margin: 0;
+}
+
+.board {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  align-items: center;
+
+  grid-template-columns: repeat(3, auto);
+}
+
+.quadrado {
+  width: var(--quadrado-size);
+  height: var(--quadrado-size);
+  border: 1px solid black;
+}
+
+.quadrado:first-child,
+.quadrado:nth-child(2),
+.quadrado:nth-child(3) {
+  border-top: none;
+}
