@@ -6,7 +6,7 @@
 
 :root {
   --quadrado-size: 100px;
-  --mark-size: cal(var(--quadrado-size) * 0.9);
+  --mark-size: calc(var(--quadrado-size) * 0.9);
 }
 
 body {
@@ -21,6 +21,7 @@ body {
   justify-items: center;
   align-content: center;
   align-items: center;
+  background-color: rgb(57, 190, 173);
 
   grid-template-columns: repeat(3, auto);
 }
@@ -28,11 +29,65 @@ body {
 .quadrado {
   width: var(--quadrado-size);
   height: var(--quadrado-size);
-  border: 1px solid black;
+  border: 4px solid rgba(0, 0, 0, 0.54);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 .quadrado:first-child,
 .quadrado:nth-child(2),
 .quadrado:nth-child(3) {
   border-top: none;
+}
+
+.quadrado:nth-child(3n + 1) {
+  border-left: none;
+}
+
+.quadrado:nth-child(3n + 3) {
+  border-right: none;
+}
+
+.quadrado:last-child,
+.quadrado:nth-child(8),
+.quadrado:nth-child(7) {
+  border-bottom: none;
+}
+
+.quadrado.x::before,
+.quadrado.x::after {
+  content: "";
+  position: absolute;
+  width: calc(var(--mark-size) * 0.15);
+  height: var(--mark-size);
+  background-color: rgb(84, 84, 84);
+}
+
+.quadrado.x::before {
+  transform: rotate(45deg);
+}
+
+.quadrado.x::after {
+  transform: rotate(-45deg);
+}
+
+.quadrado.circulo::before,
+.quadrado.circulo::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+}
+
+.quadrado.circulo::after {
+  width: calc(var(--mark-size) * 0.7);
+  height: calc(var(--mark-size) * 0.7);
+  background-color: rgb(57, 190, 173);
+}
+
+.quadrado.circulo::before {
+  width: var(--mark-size);
+  height: var(--mark-size);
+  background-color: rgb(242, 235, 211);
 }
