@@ -21,7 +21,7 @@ body {
   justify-items: center;
   align-content: center;
   align-items: center;
-  background-color: rgb(57, 190, 173);
+  background-color: #988aff;
 
   grid-template-columns: repeat(3, auto);
 }
@@ -34,6 +34,7 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
+  cursor: pointer;
 }
 
 .quadrado:first-child,
@@ -65,6 +66,11 @@ body {
   background-color: rgb(84, 84, 84);
 }
 
+.quadrado.x,
+.quadrado.circulo {
+  cursor: not-allowed;
+}
+
 .quadrado.x::before {
   transform: rotate(45deg);
 }
@@ -83,7 +89,7 @@ body {
 .quadrado.circulo::after {
   width: calc(var(--mark-size) * 0.7);
   height: calc(var(--mark-size) * 0.7);
-  background-color: rgb(57, 190, 173);
+  background-color: #988aff;
 }
 
 .quadrado.circulo::before {
