@@ -59,23 +59,31 @@ body {
 
 .quadrado.x::before,
 .quadrado.x::after {
+  background-color: rgb(84, 84, 84);
+}
+
+.board.x .quadrado:not(.x):not(.circulo):hover::before,
+.board.x .quadrado:not(.x):not(.circulo):hover::after {
+  background-color: lightgray;
+}
+
+.quadrado.x::before,
+.quadrado.x::after,
+.board.x .quadrado:not(.x):not(.circulo):hover::before,
+.board.x .quadrado:not(.x):not(.circulo):hover::after {
   content: "";
   position: absolute;
   width: calc(var(--mark-size) * 0.15);
   height: var(--mark-size);
-  background-color: rgb(84, 84, 84);
 }
 
-.quadrado.x,
-.quadrado.circulo {
-  cursor: not-allowed;
-}
-
-.quadrado.x::before {
+.quadrado.x::before,
+.board.x .quadrado:not(.x):not(.circulo):hover::before {
   transform: rotate(45deg);
 }
 
-.quadrado.x::after {
+.quadrado.x::after,
+.board.x .quadrado:not(.x):not(.circulo):hover::after {
   transform: rotate(-45deg);
 }
 
@@ -84,6 +92,11 @@ body {
   content: "";
   position: absolute;
   border-radius: 50%;
+}
+
+.quadrado.x,
+.quadrado.circulo {
+  cursor: not-allowed;
 }
 
 .quadrado.circulo::after {
