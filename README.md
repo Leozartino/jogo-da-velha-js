@@ -1,6 +1,6 @@
 # **Jogo da velha** ❌🎮⭕
 ## Passatempo divertido 😁
-Jogo clássico, popular e simples. Feito com CSS, Javacript e HTML.
+Jogo clássico, popular e simples.
 
 ![Jogo da velha](https://github.com/Leozartino/jogo-da-velha-js/blob/master/gifJogodaVelha.gif)
 
