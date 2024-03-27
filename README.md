@@ -1,4 +1,4 @@
- **Tic Tac Toe* ❌🎮⭕
+# Tic Tac Toe ❌🎮⭕
 ## Passatempo divertido 😁
 Jogo clássico, popular e simples.
 
