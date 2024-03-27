@@ -1,4 +1,4 @@
-# **Jogo da velha** ❌🎮⭕
+# **Tic Tac Toe* ❌🎮⭕
 ## Passatempo divertido 😁
 Jogo clássico, popular e simples.
 
